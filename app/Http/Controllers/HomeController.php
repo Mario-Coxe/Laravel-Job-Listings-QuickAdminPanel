@@ -31,7 +31,7 @@ class HomeController extends Controller
             ->searchResults()
             ->paginate(7);
 
-        $banner = 'Search results';
+        $banner = 'Procurar Resultados';
 
         return view('jobs.index', compact(['jobs', 'banner']));
     }

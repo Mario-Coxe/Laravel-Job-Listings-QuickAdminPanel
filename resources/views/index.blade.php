@@ -7,17 +7,17 @@
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content col-lg-12">
                 <h1 class="text-white">
-                    <span>1500+</span> Jobs posted last week				
+                    <span>VagaIdeal</span> Seu Portal de Vagas				
                 </h1>	
                 <form action="{{ route('search') }}" class="serach-form-area">
                     <div class="row justify-content-center form-wrap">
                         <div class="col-lg-4 form-cols">
-                            <input type="text" class="form-control" name="search" placeholder="What are you looking for?">
+                            <input type="text" class="form-control" name="search" placeholder="O que você está procurando?">
                         </div>
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects">
                                 <select name="location">
-                                    <option value="0">All Areas</option>
+                                    <option value="0">Todas as áreas</option>
                                     @foreach($searchLocations as $id=>$searchLocations)
                                         <option value="{{ $id }}">{{ $searchLocations }}</option>
                                     @endforeach
@@ -27,7 +27,7 @@
                         <div class="col-lg-3 form-cols">
                             <div class="default-select" id="default-selects2">
                                 <select name="category">
-                                    <option value="0">All Categories</option>
+                                    <option value="0">Todas as categorias</option>
                                     @foreach($searchCategories as $id=>$searchCategories)
                                         <option value="{{ $id }}">{{ $searchCategories }}</option>
                                     @endforeach
@@ -36,12 +36,12 @@
                         </div>
                         <div class="col-lg-2 form-cols">
                             <button type="submit" class="btn btn-info">
-                              <span class="lnr lnr-magnifier"></span> Search
+                              <span class="lnr lnr-magnifier"></span> Pesquisar
                             </button>
                         </div>								
                     </div>
                 </form>	
-                <p class="text-white"> <span>Search by categories:</span>
+                <p class="text-white"> <span>Pesquisar por categorias:</span>
                 @foreach($searchByCategory as $id=>$searchByCategory)
                     <a href="{{ route('categories.show', $id) }}" class="text-white">{{ $searchByCategory }}</a>@if (!$loop->last),@endif
                 @endforeach
@@ -71,13 +71,13 @@
                 <p>
                     {{ $job->short_description }}
                 </p>
-                <h5>Job Nature: {{ $job->job_nature }}</h5>
+                <h5>Tempo: {{ $job->job_nature }}</h5>
                 <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
                 <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
             </div>
         </div>
     @endforeach
 
-    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Load More Job Posts</a>
+    <a class="text-uppercase loadmore-btn mx-auto d-block" href="{{ route('jobs.index') }}">Mais vagas</a>
 </div>	
 @endsection

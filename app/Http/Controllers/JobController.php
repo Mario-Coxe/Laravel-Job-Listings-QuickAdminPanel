@@ -13,7 +13,7 @@ class JobController extends Controller
         $jobs = Job::with('company')
             ->paginate(7);
 
-        $banner = 'Jobs';
+        $banner = 'Empregos';
 
         return view('jobs.index', compact(['jobs', 'banner']));
     }
