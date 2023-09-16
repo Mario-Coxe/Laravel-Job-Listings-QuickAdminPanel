@@ -21,7 +21,7 @@
                 <p>
                     {{ $job->short_description }}
                 </p>
-                <h5>Job Nature: {{ $job->job_nature }}</h5>
+                <h5>Modo: {{ $job->job_nature }}</h5>
                 <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
                 <p class="address"><span class="lnr lnr-database"></span> {{ $job->salary }}</p>
             </div>

@@ -24,7 +24,7 @@
                         {{ $job->short_description }}
                     </p>
                     @if($job->job_nature)
-                        <h5>Job Nature: {{ $job->job_nature }}</h5>
+                        <h5>Modo: {{ $job->job_nature }}</h5>
                     @endif
                     @if($job->address)
                         <p class="address"><span class="lnr lnr-map"></span> {{ $job->address }}</p>
